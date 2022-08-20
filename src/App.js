@@ -3,6 +3,7 @@ import './App.css';
 import { useState } from 'react';
 import NewRecruit from './NewRecruit';
 import MainToon from './MainToon';
+import { HashRouter as Router } from 'react-router-dom';
 
 function App() {
   const [offName, setOffName] = useState('');
@@ -11,11 +12,15 @@ function App() {
   const date = new Date().toISOString().slice(5, 10).replace('-', '/');
 
   return (
-    <div className="App">
-      <h1>JR Notes</h1>
-      <MainToon />
-
-    </div>
+    <Router>
+      <div className="App">
+        <h1>JR Notes</h1>
+        <MainToon />
+        <footer>
+          This is a Work-In-Progress and may have bugs
+        </footer>
+      </div>
+    </Router>
   );
 }
 
