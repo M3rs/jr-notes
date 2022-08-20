@@ -68,31 +68,27 @@ function MainToon () {
     };
 
     return (
-        <div>
-            <div>
+        <div className="MainToon">
+            <div className="Officer">
                 <label>Inviting Officer</label>
                 <input value={offName} onChange={saveAndSetOfficerName} />
             </div>
             <h3>Main Toon Info</h3>
             <div>
-                <label>Name</label>
-                <input value={toonName} onChange={e => setToonName(e.target.value)} />
-            </div>
-            <div>
-                <label>LP</label>
-                <input type="number" value={lp} onChange={e => setLP(e.target.value)} />
-            </div>
-            <div>
-                <label>Guild</label>
-                <select value={guild} onChange={e => setGuild(e.target.value)}>
-                    <option value='0'>Je'daii Reborn</option>
-                    <option value='1'>Je'daii Academy</option>
-                    <option value='2'>Revån's Råpture</option>
-                    <option value='3'>Dark Je'daii</option>
-                </select>
-            </div>
-            <div>
                 <dl>
+                    <dt>Name</dt>
+                    <dd><input value={toonName} onChange={e => setToonName(e.target.value)} /></dd>
+                    <dt>LP</dt>
+                    <dd><input type="number" value={lp} onChange={e => setLP(e.target.value)} /></dd>
+                    <dt>Guild</dt>
+                    <dd>
+                        <select value={guild} onChange={e => setGuild(e.target.value)}>
+                            <option value='0'>Je'daii Reborn</option>
+                            <option value='1'>Je'daii Academy</option>
+                            <option value='2'>Revån's Råpture</option>
+                            <option value='3'>Dark Je'daii</option>
+                        </select>
+                    </dd>
                     <dt>Note</dt>
                     <dd>{calcNote()}</dd>
                     <dt>Rank</dt>

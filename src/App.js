@@ -17,7 +17,8 @@ function App() {
         <h1>JR Notes</h1>
         <MainToon />
         <footer>
-          This is a Work-In-Progress and may have bugs
+          <p>This is a Work-In-Progress and may have bugs. Please double-check again generated guild notes for accuracy</p>
+          <p>If you find any bugs, please feel free to contact Jedrzejczyk on Discord or via in-game mail.</p>
         </footer>
       </div>
     </Router>
